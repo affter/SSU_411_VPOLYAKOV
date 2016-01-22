@@ -155,8 +155,7 @@ public class Parser {
                 if(partialResult == 0.0){
                     result = 1.0;
                 }else
-                    for(t = (int)partialResult - 1; t >  0; t--)
-                        result *= ex;
+                        result = Math.pow(result,partialResult);
             }
             return result;
         }
