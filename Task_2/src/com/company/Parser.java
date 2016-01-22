@@ -160,9 +160,24 @@ public class Parser {
             }
             return result;
         }
+    private double evalExp5() throws ParserException{
+        double result;
 
+        String op;
+        op = " ";
+
+        if((tokType == DELIMITER) && token.equals("+") ||
+                token.equals("-")){
+            op = token;
+            getToken();
+        }
+        result = evalExp6();
+        if(op.equals("-"))
+            result =  -result;
+        return result;
+    }
         //  Обработать выражение в скобках
-        private double evalExp5() throws ParserException{
+        private double evalExp6() throws ParserException{
             double result;
 
             if(token.equals("(")){
