@@ -8,7 +8,6 @@ public class Parser {
         //  Объявление лексем
         final int NONE = 0;         //  Пусто
         final int DELIMITER = 1;    //  Разделитель)
-        final int VARIABLE = 2;     //  Переменная
         final int NUMBER = 3;       //  Число
 
         //  Объявление констант синтаксических ошибок
@@ -123,7 +122,7 @@ public class Parser {
 
             result = evalExp4();
             while((op = token.charAt(0)) == '*' ||
-                    op == '/' | op == '%'){
+                    op == '/'){
                 getToken();
                 partialResult = evalExp4();
                 switch(op){
