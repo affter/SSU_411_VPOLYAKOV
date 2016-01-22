@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Busket busket = new Busket();
+        Basket basket = new Basket();
         int action = -1;
         Scanner in = new Scanner(System.in);
         while (action < 0) {
@@ -33,7 +33,7 @@ public class Main {
                     try {
                         String tempInt = in.nextLine();
                         int quantity = Integer.parseInt(tempInt);
-                        busket.addProduct(temp,quantity);
+                        basket.addProduct(temp,quantity);
                     } catch (Exception e) {
                         System.out.println("Некорректный ввод!");
                     }
@@ -44,7 +44,7 @@ public class Main {
                     System.out.print("Введите наименование продукта:");
                     String temp = in.nextLine();
                     try {
-                        busket.removeProduct(temp);
+                        basket.removeProduct(temp);
                     } catch (Exception e) {
                         System.out.println("Некорректный ввод!");
                     }
@@ -52,21 +52,21 @@ public class Main {
                     break;
                 }
                 case 3:{
-                    List<String> products = busket.getProducts();
+                    List<String> products = basket.getProducts();
                     for (int i = 0;i<products.size();i++)
-                        System.out.print(products.get(i) + "\t" + busket.getProductQuantity(products.get(i)) + "\n");
+                        System.out.print(products.get(i) + "\t" + basket.getProductQuantity(products.get(i)) + "\n");
                     action = -1;
                     break;
                 }
                 case 4:{
                     System.out.print("Введите наименование продукта:");
                     String temp = in.nextLine();
-                    if (busket.getProducts().contains(temp)) {
+                    if (basket.getProducts().contains(temp)) {
                         System.out.print("Введите новую стоимость продукта:");
                         try {
                             String tempInt = in.nextLine();
                             int quantity = Integer.parseInt(tempInt);
-                            busket.updateProductQuantity(temp, quantity);
+                            basket.updateProductQuantity(temp, quantity);
                         } catch (Exception e) {
                             System.out.println("Некорректный ввод!");
                         }
@@ -78,7 +78,7 @@ public class Main {
                     break;
                 }
                 case 5:{
-                    busket.clear();
+                    basket.clear();
                     action = -1;
                     break;
                 }

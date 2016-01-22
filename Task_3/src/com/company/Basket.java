@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by ASUS on 21.01.2016.
  */
-public class Busket implements IBusket {
+public class Basket implements IBasket {
     private List<String> products = new LinkedList<>();
     private List<Integer> prices = new LinkedList<>();
     public void addProduct(String product, int quantity) {

@@ -3,7 +3,7 @@ package com.company;
 import java.util.List;
 
 
-public interface IBusket {
+public interface IBasket {
     void addProduct(String product, int quantity);
     void removeProduct(String product);
     void updateProductQuantity(String product, int quantity);
