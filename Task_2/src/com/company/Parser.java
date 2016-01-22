@@ -158,6 +158,7 @@ public class Parser {
             }
             return result;
         }
+
     private double evalExp5() throws ParserException{
         double result;
 
