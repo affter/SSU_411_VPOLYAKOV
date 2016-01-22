@@ -21,10 +21,14 @@ public class Task_1_1 {
         }
         calendar.set(calendar.DAY_OF_MONTH,13);
         calendar.set(calendar.YEAR,year);
+        int count = 0;
         for (int i = 0; i<12; i++){
             calendar.set(calendar.MONTH,i);
-            if (calendar.get(calendar.DAY_OF_WEEK) == Calendar.FRIDAY)
+            if (calendar.get(calendar.DAY_OF_WEEK) == Calendar.FRIDAY) {
                 System.out.println(dateFormat.format(calendar.getTime()));
+                count++;
+            }
         }
+        System.out.println("Всего месяцев:" + count);
     }
 }

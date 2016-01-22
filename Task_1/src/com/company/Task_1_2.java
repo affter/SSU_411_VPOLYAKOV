@@ -28,11 +28,15 @@ public class Task_1_2 {
         calendar.set(calendar.DAY_OF_MONTH,13);
         calendar.set(calendar.YEAR,year);
         calendar.set(calendar.MONTH,month-1);
+        int count = 0;
         while (calendar.compareTo(Calendar.getInstance())<0){
-            if(calendar.get(calendar.DAY_OF_WEEK) == calendar.FRIDAY)
+            if(calendar.get(calendar.DAY_OF_WEEK) == calendar.FRIDAY) {
                 System.out.println(calendar.get(calendar.YEAR));
+                count++;
+            }
             year++;
         calendar.set(calendar.YEAR,year);
         }
+        System.out.println("Всего совпадений:" + count);
         }
     }
