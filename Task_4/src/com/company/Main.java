@@ -69,8 +69,9 @@ public class Main {
                         }
                         lineCount++;
                     }
+                    System.out.println("Файл " + transaction.getName() + " обработан");
                 } catch (Exception e) {
-                    System.out.println("файл " + transaction.getPath() + " не обработан");
+                    System.out.println("Файл " + transaction.getName() + " не обработан");
                 }
                 reader.close();
             }
