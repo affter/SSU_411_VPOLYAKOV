@@ -70,7 +70,7 @@ public class Main {
                         lineCount++;
                     }
                 } catch (Exception e) {
-                    System.out.println("файл " + transaction.getPath() + " не обработал");
+                    System.out.println("файл " + transaction.getPath() + " не обработан");
                 }
                 reader.close();
             }
